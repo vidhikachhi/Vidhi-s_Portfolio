@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    box-sizing: border-box;
+    background-color: black;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+#home {
+    padding-bottom: 5vw;
+    width: 100%;
+    height: 100vh;
+}
+
+nav .logo {
+    margin-left: 10vw;
+}
+
+nav .btn {
+    margin-right: 10vw;
+}
+
+nav .logo span {
+    color: rgb(188, 144, 30);
+    font-style: italic;
+}
+
+nav {
+    padding-top: 3vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0 1vw;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: rgb(188, 144, 30);
+}
+
+.mybox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.mybox img {
+    height: 600px;
+    width: 540px;
+}
+
+.mybox.content {
+
+    height: 40vh;
+    width: 50vh;
+}
+
+.social {
+    display: flex;
+}
+
+.social .link {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid rgb(188, 144, 30);
+    background-color: rgb(0, 0, 0);
+    margin: 1vw 1.5vw 4vw 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.link a {
+    font-size: 15px;
+}
+
+.edu {
+    margin-left: 5vw;
+}
+
+
+.add a {
+    text-decoration: none;
+    color: white;
+}
+
+
+#about,
+#skills {
+    width: 100%;
+    padding: 3vw 3vw;
+    padding-left: 10vw;
+    padding-right: 8vw;
+}
+
+.m {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#skills p b {
+    font-size: larger;
+}
+
+#skills p b:hover {
+    color: #ffc107;
+}
+
+.about-text {
+    width: 48%;
+    padding-bottom: 3rem;
+    align-self: start;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#connect {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+button {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+@media(max-width:800px) {
+    .hide {
+        display: none;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .main .about-text {
+        width: 100%;
+        margin: 0;
+    }
+
+    .form-group {
+        width: 200px;
+    }
+
+    .mybox {
+        flex-direction: column-reverse;
+    }
+
+    .mybox img {
+        height: 400px;
+        width: 350px;
+    }
+
+    .mybox.content {
+        display: flex;
+        flex-direction: column;
+        height: 40vh;
+        width: 50vh;
+    }
+
+    .add {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #about {
+        padding-top: 50px;
+    }
+
+    .showcard {
+        flex-direction: column;
+    }
+
+    #connect {
+        flex-direction: column;
+    }
+}
+
+.box {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+#connect {
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.add {
+    display: flex;
+}
+
+footer {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+footer .middle {
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 350px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e3b212;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+button {
+    padding: 12px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+#project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.showcard {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.card {
+    width: 18rem;
+    margin: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card img {
+    height: 10rem;
+    object-fit: cover;
+    width: 100%;
+}
+
+.scroll-hide {
+    height: 150px;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scroll-hide::-webkit-scrollbar {
+    display: none;
+}
