@@ -64,7 +64,7 @@
                         class="btn btn-outline-warning">Let's Connect</button></a>
 
             </div>
-            <!-- <img src="p.png" alt=""> -->
+            <img src="p.png" alt=""> 
         </div>
 
         <div id="about">
@@ -279,18 +279,40 @@
                 backSpeed: 25,
                 loop: true
             });
-          VANTA.GLOBE({
-  el: "#mybox",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  color: 0x907c17,
-  backgroundColor: 0x0
-})
+ let vantaEffect = null;
+
+  function initVantaIfNeeded() {
+    const screenWidth = window.innerWidth;
+    const myBox = document.getElementById("mybox");
+
+    if (screenWidth >= 768 && !vantaEffect && myBox) {
+      vantaEffect = VANTA.GLOBE({
+        el: "#mybox",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0xffcc00,
+        backgroundColor: 0x000000
+      });
+    }
+
+    // If screen is small and Vanta is active, destroy it
+    if (screenWidth < 768 && vantaEffect) {
+      vantaEffect.destroy();
+      vantaEffect = null;
+    }
+  }
+
+  // Call once on load
+  window.addEventListener("DOMContentLoaded", initVantaIfNeeded);
+
+  // Call again on resize
+  window.addEventListener("resize", initVantaIfNeeded);
+
         </script>
 </body>
 </html>
