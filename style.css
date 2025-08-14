@@ -202,10 +202,26 @@ button:hover {
               
     }
 
-    .mybox img {
-        visibility:visible;
-        height: 400px;
-        width: 350px;
+      #mybox {
+        flex-direction: column-reverse; /* reverses order on mobile */
+        height: auto;
+        padding: 20px 0;
+        align-items: center;
+    }
+
+    #mybox img {
+        visibility: visible;
+        display: block;
+        max-width: 90%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    #mybox .content {
+        position: static;
+        top: auto;
+        left: auto;
+        text-align: center;
     }
 
     #mybox.content {
