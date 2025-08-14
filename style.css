@@ -60,11 +60,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: space-around;
 } */
-#mybox img {
-    visibility: hidden;
-    height: 600px;
-    width: 540px;
-} 
+
 
 /* .mybox.content {
 
@@ -72,6 +68,11 @@ nav ul li a:hover {
     width: 50vh;
 } */
 
+#mybox img {
+    visibility: hidden;
+      height: 400px;
+        width: 350px;
+} 
 #mybox {
   width: 100%;
   height: 87vh;
@@ -79,7 +80,7 @@ nav ul li a:hover {
   display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-around9;
 
 }
 
@@ -197,9 +198,8 @@ button:hover {
     }
 
     #mybox {
-        flex-direction: column-reverse; 
-           height: 40vh;
-        width: 50vh;  
+        flex-direction: column; 
+              
     }
 
     .mybox img {
